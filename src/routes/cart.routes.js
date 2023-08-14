@@ -10,6 +10,16 @@ routerCart.post('/', async (req, res) => {
     res.status(201).json(newCart);
 });
 
+routerCart.get('/', async (req, res) => {
+    const carts = await cartManager.getCarts();
+
+    if (carts.length === 0) {
+        res.status(404).send('No hay carritos creados');
+    } else {
+        res.status(200).json(carts);
+    }
+});
+
 
 routerCart.get('/:cid', async (req, res) => {
     const { cid } = req.params;

@@ -17,6 +17,16 @@ export class CartManager {
     return newCart;
   }
 
+  //Agrego metodo para ver los carritos creados 
+  async getCarts() {
+    try {
+        const cartsData = await fs.readFile(this.filePath, 'utf-8');
+        return JSON.parse(cartsData);
+    } catch (error) {
+        return [];
+    }
+}
+
   async getCartById(id) {
     await this.loadCartsFromFile();
     const cart = this.carts.find(cart => cart.id === id);
@@ -44,6 +54,8 @@ export class CartManager {
       return false;
     }
   }
+
+   //Agrego metodo para borrar los carritos creados por Id
   async deleteCart(id) {
     await this.loadCartsFromFile();
     
