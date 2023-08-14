@@ -1,0 +1,32 @@
+[
+  {
+    "title": "producto 2",
+    "description": " descripción 2",
+    "price": 29.99,
+    "status": true,
+    "thumbnail": "nuevo2/ruta/imagen.jpg",
+    "code": "NP112233",
+    "stock": 20,
+    "id": "37a835d7-a4c0-4bcc-9c3e-a3e1c051b7ab"
+  },
+  {
+    "title": "producto 1",
+    "description": " descripción 1",
+    "price": 29.99,
+    "status": true,
+    "thumbnail": "nuevo1/ruta/imagen.jpg",
+    "code": "ABC123",
+    "stock": 20,
+    "id": "0b9b3555-d73c-492f-8a5e-6590b9e8c390"
+  },
+  {
+    "title": "producto 3",
+    "description": " descripción 3",
+    "price": 29.99,
+    "status": true,
+    "thumbnail": "nuevo3/ruta/imagen.jpg",
+    "code": "AWR112233",
+    "stock": 20,
+    "id": "b458dc92-ca58-4e38-8b28-5aef2babea57"
+  }
+]
