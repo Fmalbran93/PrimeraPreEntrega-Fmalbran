@@ -10,7 +10,7 @@ export class ProductManager {
   async addProduct(product) {
     await this.loadProductsFromFile();
     
-    if (!product.title || !product.description || !product.price || !product.code || !product.stock) {
+    if (!product.title || !product.description || !product.price || !product.category || !product.code || !product.stock) {
       console.error('Todos los campos del producto son obligatorios.');
       return;
     }
