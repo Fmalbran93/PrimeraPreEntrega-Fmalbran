@@ -37,3 +37,8 @@ button {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.no-products {
+    color: red;
+    font-weight: bold;
+  }

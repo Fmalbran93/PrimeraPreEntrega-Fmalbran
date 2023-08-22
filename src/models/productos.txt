@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "fede",
+    "description": "123",
+    "category": "123123",
+    "price": "123123",
+    "stock": "123",
+    "code": "asd1233",
+    "status": true,
+    "id": "bc815400-4e74-4a4e-aa86-c068e8e69c23"
+  }
+]

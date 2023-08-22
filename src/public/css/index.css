@@ -34,3 +34,15 @@ body {
   .product-container p:last-child {
 	color: #e74c3c;
   }
+h3{
+	color: #e74c3c
+}
+
+button {
+    background-color: rgb(184, 125, 192);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
