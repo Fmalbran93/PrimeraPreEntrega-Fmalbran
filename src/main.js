@@ -44,6 +44,13 @@ io.on('connection', socket => {
 		const products = await productManager.getProducts();
 		socket.emit('products', products);
 	});
+
+	socket.on('deleteProduct', async productId => {
+		await productManager.deleteProduct(productId);
+		const products = await productManager.getProducts();
+		io.emit('products', products); // Emitir la lista actualizada a todos los clientes
+	});
+	
 });
 
 // Routes

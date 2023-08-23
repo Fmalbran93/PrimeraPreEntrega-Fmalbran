@@ -33,7 +33,7 @@
 		<p>Status: ${prod.status}</p>
 		<p>Code: ${prod.code}</p>
 		<p>Stock: ${prod.stock}</p>
-
+		<button class="delete-button" onclick="deleteProduct('${prod.id}')">Eliminar</button>
 		</div>
 	
 		`;
@@ -42,7 +42,12 @@
 		e.target.reset();
 	});
 
-	// Agregar el evento al botón de redirección
+	// Agregue el evento al botón de redirección a static
 goToStaticButton.addEventListener('click', () => {
 	window.location.href = '/static';
 });
+
+// Agregar evento para eliminar un producto
+function deleteProduct(productId) {
+	socket.emit('deleteProduct', productId); // Enviar la solicitud de eliminación al servidor
+}

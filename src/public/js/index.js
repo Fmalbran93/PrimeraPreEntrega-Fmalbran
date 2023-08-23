@@ -5,7 +5,9 @@ const goToRealTimeProds = document.querySelector('#goToRealTimeProds');
 
 socket.emit('load');
 
-
+function deleteProduct(productId) {
+	socket.emit('deleteProduct', productId);
+}
 socket.on('products', products => {
 	if (products.length === 0) {
 		productsContainer.innerHTML = '<h3> No hay productos agregados al momento, ve a <a href="/static/realtimeproducts">/static/realtimeproducts</a> para agregarlos!.</h3>';
@@ -21,11 +23,13 @@ socket.on('products', products => {
 				<p>Status: ${prod.status}</p>
 				<p>Code: ${prod.code}</p>
 				<p>Stock: ${prod.stock}</p>
+				<button class="delete-button" onclick="deleteProduct('${prod.id}')">Eliminar</button>
 			</div>
 			`;
 		});
 	}
 });
+
 
 	// Agregue el evento al botón de redirección a realtimeprods
   goToRealTimeProds.addEventListener('click', () => {
