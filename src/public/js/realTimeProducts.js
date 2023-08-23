@@ -47,7 +47,7 @@ goToStaticButton.addEventListener('click', () => {
 	window.location.href = '/static';
 });
 
-// Agregar evento para eliminar un producto
+// Agregue evento para eliminar un producto
 function deleteProduct(productId) {
-	socket.emit('deleteProduct', productId); // Enviar la solicitud de eliminación al servidor
+	socket.emit('deleteProduct', productId); 
 }
